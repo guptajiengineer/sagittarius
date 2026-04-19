@@ -1,0 +1,790 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "middleware.ts",
+      "file_type": "code",
+      "source_file": "apps\\web\\middleware.ts",
+      "source_location": "L1",
+      "id": "apps_web_middleware_ts",
+      "community": 2,
+      "norm_label": "middleware.ts"
+    },
+    {
+      "label": "middleware()",
+      "file_type": "code",
+      "source_file": "apps\\web\\middleware.ts",
+      "source_location": "L4",
+      "id": "middleware_middleware",
+      "community": 2,
+      "norm_label": "middleware()"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "apps\\web\\next-env.d.ts",
+      "source_location": "L1",
+      "id": "apps_web_next_env_d_ts",
+      "community": 11,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "next.config.mjs",
+      "file_type": "code",
+      "source_file": "apps\\web\\next.config.mjs",
+      "source_location": "L1",
+      "id": "apps_web_next_config_mjs",
+      "community": 12,
+      "norm_label": "next.config.mjs"
+    },
+    {
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "apps\\web\\postcss.config.js",
+      "source_location": "L1",
+      "id": "apps_web_postcss_config_js",
+      "community": 13,
+      "norm_label": "postcss.config.js"
+    },
+    {
+      "label": "tailwind.config.ts",
+      "file_type": "code",
+      "source_file": "apps\\web\\tailwind.config.ts",
+      "source_location": "L1",
+      "id": "apps_web_tailwind_config_ts",
+      "community": 14,
+      "norm_label": "tailwind.config.ts"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\layout.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_layout_tsx",
+      "community": 3,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\layout.tsx",
+      "source_location": "L9",
+      "id": "layout_rootlayout",
+      "community": 3,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\(dashboard)\\layout.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_dashboard_layout_tsx",
+      "community": 4,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "DashboardLayout()",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\(dashboard)\\layout.tsx",
+      "source_location": "L1",
+      "id": "layout_dashboardlayout",
+      "community": 4,
+      "norm_label": "dashboardlayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\(dashboard)\\dashboard\\page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_dashboard_dashboard_page_tsx",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "DashboardPage()",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\(dashboard)\\dashboard\\page.tsx",
+      "source_location": "L1",
+      "id": "page_dashboardpage",
+      "community": 5,
+      "norm_label": "dashboardpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\(marketing)\\page.tsx",
+      "source_location": "L1",
+      "id": "apps_web_app_marketing_page_tsx",
+      "community": 6,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "MarketingPage()",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\(marketing)\\page.tsx",
+      "source_location": "L1",
+      "id": "page_marketingpage",
+      "community": 6,
+      "norm_label": "marketingpage()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\api\\v1\\health\\route.ts",
+      "source_location": "L1",
+      "id": "apps_web_app_api_v1_health_route_ts",
+      "community": 7,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "apps\\web\\app\\api\\v1\\health\\route.ts",
+      "source_location": "L4",
+      "id": "route_get",
+      "community": 7,
+      "norm_label": "get()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps\\worker\\src\\index.ts",
+      "source_location": "L1",
+      "id": "apps_worker_src_index_ts",
+      "community": 15,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "orchestrator.ts",
+      "file_type": "code",
+      "source_file": "apps\\worker\\src\\orchestrator.ts",
+      "source_location": "L1",
+      "id": "apps_worker_src_orchestrator_ts",
+      "community": 8,
+      "norm_label": "orchestrator.ts"
+    },
+    {
+      "label": "orchestrateScan()",
+      "file_type": "code",
+      "source_file": "apps\\worker\\src\\orchestrator.ts",
+      "source_location": "L9",
+      "id": "orchestrator_orchestratescan",
+      "community": 8,
+      "norm_label": "orchestratescan()"
+    },
+    {
+      "label": "dpdp-rules.ts",
+      "file_type": "code",
+      "source_file": "packages\\config\\src\\dpdp-rules.ts",
+      "source_location": "L1",
+      "id": "packages_config_src_dpdp_rules_ts",
+      "community": 16,
+      "norm_label": "dpdp-rules.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "packages\\config\\src\\index.ts",
+      "source_location": "L1",
+      "id": "packages_config_src_index_ts",
+      "community": 17,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "scan-limits.ts",
+      "file_type": "code",
+      "source_file": "packages\\config\\src\\scan-limits.ts",
+      "source_location": "L1",
+      "id": "packages_config_src_scan_limits_ts",
+      "community": 18,
+      "norm_label": "scan-limits.ts"
+    },
+    {
+      "label": "severity-weights.ts",
+      "file_type": "code",
+      "source_file": "packages\\config\\src\\severity-weights.ts",
+      "source_location": "L1",
+      "id": "packages_config_src_severity_weights_ts",
+      "community": 19,
+      "norm_label": "severity-weights.ts"
+    },
+    {
+      "label": "seed.ts",
+      "file_type": "code",
+      "source_file": "packages\\db\\prisma\\seed.ts",
+      "source_location": "L1",
+      "id": "packages_db_prisma_seed_ts",
+      "community": 9,
+      "norm_label": "seed.ts"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "packages\\db\\prisma\\seed.ts",
+      "source_location": "L5",
+      "id": "seed_main",
+      "community": 9,
+      "norm_label": "main()"
+    },
+    {
+      "label": "client.ts",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\client.ts",
+      "source_location": "L1",
+      "id": "packages_db_src_client_ts",
+      "community": 20,
+      "norm_label": "client.ts"
+    },
+    {
+      "label": "helpers.ts",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L1",
+      "id": "packages_db_src_helpers_ts",
+      "community": 0,
+      "norm_label": "helpers.ts"
+    },
+    {
+      "label": "getUserByEmail()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L11",
+      "id": "helpers_getuserbyemail",
+      "community": 0,
+      "norm_label": "getuserbyemail()"
+    },
+    {
+      "label": "getUserById()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L22",
+      "id": "helpers_getuserbyid",
+      "community": 0,
+      "norm_label": "getuserbyid()"
+    },
+    {
+      "label": "createUser()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L33",
+      "id": "helpers_createuser",
+      "community": 0,
+      "norm_label": "createuser()"
+    },
+    {
+      "label": "getApiKeyByHash()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L44",
+      "id": "helpers_getapikeybyhash",
+      "community": 0,
+      "norm_label": "getapikeybyhash()"
+    },
+    {
+      "label": "createScan()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L55",
+      "id": "helpers_createscan",
+      "community": 0,
+      "norm_label": "createscan()"
+    },
+    {
+      "label": "updateScanStatus()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L66",
+      "id": "helpers_updatescanstatus",
+      "community": 0,
+      "norm_label": "updatescanstatus()"
+    },
+    {
+      "label": "createConsentLog()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L80",
+      "id": "helpers_createconsentlog",
+      "community": 0,
+      "norm_label": "createconsentlog()"
+    },
+    {
+      "label": "createFindings()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L100",
+      "id": "helpers_createfindings",
+      "community": 0,
+      "norm_label": "createfindings()"
+    },
+    {
+      "label": "createScanReport()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L113",
+      "id": "helpers_createscanreport",
+      "community": 0,
+      "norm_label": "createscanreport()"
+    },
+    {
+      "label": "getScansByUserId()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L133",
+      "id": "helpers_getscansbyuserid",
+      "community": 0,
+      "norm_label": "getscansbyuserid()"
+    },
+    {
+      "label": "getScanWithReport()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L153",
+      "id": "helpers_getscanwithreport",
+      "community": 0,
+      "norm_label": "getscanwithreport()"
+    },
+    {
+      "label": "countScansInLast24Hours()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L167",
+      "id": "helpers_countscansinlast24hours",
+      "community": 0,
+      "norm_label": "countscansinlast24hours()"
+    },
+    {
+      "label": "middleware.ts",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\middleware.ts",
+      "source_location": "L1",
+      "id": "packages_db_src_middleware_ts",
+      "community": 10,
+      "norm_label": "middleware.ts"
+    },
+    {
+      "label": "applyConsentLogImmutability()",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\middleware.ts",
+      "source_location": "L8",
+      "id": "middleware_applyconsentlogimmutability",
+      "community": 10,
+      "norm_label": "applyconsentlogimmutability()"
+    },
+    {
+      "label": "helpers.test.ts",
+      "file_type": "code",
+      "source_file": "packages\\db\\src\\__tests__\\helpers.test.ts",
+      "source_location": "L1",
+      "id": "packages_db_src_tests_helpers_test_ts",
+      "community": 21,
+      "norm_label": "helpers.test.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "packages\\queue\\src\\index.ts",
+      "source_location": "L1",
+      "id": "packages_queue_src_index_ts",
+      "community": 22,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "queues.ts",
+      "file_type": "code",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L1",
+      "id": "packages_queue_src_queues_ts",
+      "community": 1,
+      "norm_label": "queues.ts"
+    },
+    {
+      "label": "createBullRedisConnection()",
+      "file_type": "code",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L9",
+      "id": "queues_createbullredisconnection",
+      "community": 1,
+      "norm_label": "createbullredisconnection()"
+    },
+    {
+      "label": "createScanQueue()",
+      "file_type": "code",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L20",
+      "id": "queues_createscanqueue",
+      "community": 1,
+      "norm_label": "createscanqueue()"
+    },
+    {
+      "label": "createScanWorker()",
+      "file_type": "code",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L35",
+      "id": "queues_createscanworker",
+      "community": 1,
+      "norm_label": "createscanworker()"
+    },
+    {
+      "label": "redis.ts",
+      "file_type": "code",
+      "source_file": "packages\\queue\\src\\redis.ts",
+      "source_location": "L1",
+      "id": "packages_queue_src_redis_ts",
+      "community": 23,
+      "norm_label": "redis.ts"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "packages\\shared-types\\src\\api.ts",
+      "source_location": "L1",
+      "id": "packages_shared_types_src_api_ts",
+      "community": 24,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "auth.ts",
+      "file_type": "code",
+      "source_file": "packages\\shared-types\\src\\auth.ts",
+      "source_location": "L1",
+      "id": "packages_shared_types_src_auth_ts",
+      "community": 25,
+      "norm_label": "auth.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "packages\\shared-types\\src\\index.ts",
+      "source_location": "L1",
+      "id": "packages_shared_types_src_index_ts",
+      "community": 26,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "scan.ts",
+      "file_type": "code",
+      "source_file": "packages\\shared-types\\src\\scan.ts",
+      "source_location": "L1",
+      "id": "packages_shared_types_src_scan_ts",
+      "community": 27,
+      "norm_label": "scan.ts"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\web\\middleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "apps_web_middleware_ts",
+      "_tgt": "middleware_middleware",
+      "source": "apps_web_middleware_ts",
+      "target": "middleware_middleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\web\\app\\layout.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "apps_web_app_layout_tsx",
+      "_tgt": "layout_rootlayout",
+      "source": "apps_web_app_layout_tsx",
+      "target": "layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\web\\app\\(dashboard)\\layout.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "apps_web_app_dashboard_layout_tsx",
+      "_tgt": "layout_dashboardlayout",
+      "source": "apps_web_app_dashboard_layout_tsx",
+      "target": "layout_dashboardlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\web\\app\\(dashboard)\\dashboard\\page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "apps_web_app_dashboard_dashboard_page_tsx",
+      "_tgt": "page_dashboardpage",
+      "source": "apps_web_app_dashboard_dashboard_page_tsx",
+      "target": "page_dashboardpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\web\\app\\(marketing)\\page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "apps_web_app_marketing_page_tsx",
+      "_tgt": "page_marketingpage",
+      "source": "apps_web_app_marketing_page_tsx",
+      "target": "page_marketingpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\web\\app\\api\\v1\\health\\route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "apps_web_app_api_v1_health_route_ts",
+      "_tgt": "route_get",
+      "source": "apps_web_app_api_v1_health_route_ts",
+      "target": "route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps\\worker\\src\\orchestrator.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "apps_worker_src_orchestrator_ts",
+      "_tgt": "orchestrator_orchestratescan",
+      "source": "apps_worker_src_orchestrator_ts",
+      "target": "orchestrator_orchestratescan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\prisma\\seed.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "packages_db_prisma_seed_ts",
+      "_tgt": "seed_main",
+      "source": "packages_db_prisma_seed_ts",
+      "target": "seed_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_getuserbyemail",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_getuserbyemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_getuserbyid",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_getuserbyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_createuser",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_createuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_getapikeybyhash",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_getapikeybyhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_createscan",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_createscan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_updatescanstatus",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_updatescanstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_createconsentlog",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_createconsentlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_createfindings",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_createfindings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_createscanreport",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_createscanreport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_getscansbyuserid",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_getscansbyuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_getscanwithreport",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_getscanwithreport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\helpers.ts",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_src": "packages_db_src_helpers_ts",
+      "_tgt": "helpers_countscansinlast24hours",
+      "source": "packages_db_src_helpers_ts",
+      "target": "helpers_countscansinlast24hours",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\db\\src\\middleware.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "packages_db_src_middleware_ts",
+      "_tgt": "middleware_applyconsentlogimmutability",
+      "source": "packages_db_src_middleware_ts",
+      "target": "middleware_applyconsentlogimmutability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "packages_queue_src_queues_ts",
+      "_tgt": "queues_createbullredisconnection",
+      "source": "packages_queue_src_queues_ts",
+      "target": "queues_createbullredisconnection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "packages_queue_src_queues_ts",
+      "_tgt": "queues_createscanqueue",
+      "source": "packages_queue_src_queues_ts",
+      "target": "queues_createscanqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "packages_queue_src_queues_ts",
+      "_tgt": "queues_createscanworker",
+      "source": "packages_queue_src_queues_ts",
+      "target": "queues_createscanworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "queues_createscanqueue",
+      "_tgt": "queues_createbullredisconnection",
+      "source": "queues_createbullredisconnection",
+      "target": "queues_createscanqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "packages\\queue\\src\\queues.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "queues_createscanworker",
+      "_tgt": "queues_createbullredisconnection",
+      "source": "queues_createbullredisconnection",
+      "target": "queues_createscanworker",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

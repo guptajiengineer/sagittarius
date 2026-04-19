@@ -1,0 +1,1 @@
+D:/code project/sagittarius/node_modules/.pnpm/@embedded-postgres+windows-x64@18.3.0-beta.17/node_modules/@embedded-postgres/windows-x64/native/bin/postgres.exe "-D" "D:\code project\sagittarius\infra\.local-infra\pg-data" "-p" "5432"

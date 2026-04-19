@@ -1,0 +1,167 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
+model User {
+  id                String   @id @default(uuid())
+  email             String   @unique
+  passwordHash      String   @map("password_hash")
+  emailVerified     Boolean  @default(false) @map("email_verified")
+  emailVerifiedAt   DateTime? @map("email_verified_at")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  apiKeys           ApiKey[]
+  scans             Scan[]
+  consentLogs       ConsentLog[]
+  emailTokens       EmailVerificationToken[]
+  refreshTokens     RefreshToken[]
+
+  @@map("users")
+}
+
+model ApiKey {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  name        String
+  keyHash     String   @unique @map("key_hash")
+  keyPrefix   String   @map("key_prefix")
+  isActive    Boolean  @default(true) @map("is_active")
+  lastUsedAt  DateTime? @map("last_used_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([keyHash])
+  @@map("api_keys")
+}
+
+enum ScanStatus {
+  queued
+  running
+  complete
+  failed
+}
+
+model Scan {
+  id              String     @id @default(uuid())
+  userId          String     @map("user_id")
+  targetUrl       String     @map("target_url")
+  targetDomain    String     @map("target_domain")
+  status          ScanStatus @default(queued)
+  score           Int?
+  subdomainsFound Int?       @map("subdomains_found")
+  startedAt       DateTime?  @map("started_at")
+  completedAt     DateTime?  @map("completed_at")
+  durationMs      Int?       @map("duration_ms")
+  errorMessage    String?    @map("error_message")
+  retryCount      Int        @default(0) @map("retry_count")
+  createdAt       DateTime   @default(now()) @map("created_at")
+
+  user            User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  consentLog      ConsentLog?
+  findings        Finding[]
+  report          ScanReport?
+
+  @@index([userId])
+  @@index([userId, createdAt(sort: Desc)])
+  @@index([status])
+  @@map("scans")
+}
+
+model ConsentLog {
+  id              String   @id @default(uuid())
+  scanId          String   @unique @map("scan_id")
+  userId          String   @map("user_id")
+  targetUrl       String   @map("target_url")
+  clientIp        String   @map("client_ip")
+  userAgent       String?  @map("user_agent")
+  consentedAt     DateTime @map("consented_at")
+  consentVersion  String   @default("v1.0") @map("consent_version")
+
+  scan            Scan     @relation(fields: [scanId], references: [id], onDelete: Cascade)
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("consent_log")
+}
+
+enum Severity {
+  critical
+  high
+  medium
+  low
+  info
+}
+
+model Finding {
+  id               String   @id @default(uuid())
+  scanId           String   @map("scan_id")
+  module           String
+  title            String
+  description      String
+  severity         Severity
+  dpdpSection      String?  @map("dpdp_section")
+  dpdpFineRange    String?  @map("dpdp_fine_range")
+  dpdpImplication  String?  @map("dpdp_implication")
+  recommendation   String
+  rawData          Json     @map("raw_data")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  scan             Scan     @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@index([scanId])
+  @@index([scanId, severity])
+  @@map("findings")
+}
+
+model ScanReport {
+  id               String   @id @default(uuid())
+  scanId           String   @unique @map("scan_id")
+  summary          String
+  llmModel         String   @map("llm_model")
+  llmInputTokens   Int      @map("llm_input_tokens")
+  llmOutputTokens  Int      @map("llm_output_tokens")
+  llmCostUsd       Decimal  @map("llm_cost_usd") @db.Decimal(10, 6)
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  scan             Scan     @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@map("scan_reports")
+}
+
+model EmailVerificationToken {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  tokenHash  String   @unique @map("token_hash")
+  expiresAt  DateTime @map("expires_at")
+  usedAt     DateTime? @map("used_at")
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([tokenHash])
+  @@index([userId])
+  @@map("email_verification_tokens")
+}
+
+model RefreshToken {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  tokenHash  String   @unique @map("token_hash")
+  expiresAt  DateTime @map("expires_at")
+  revokedAt  DateTime? @map("revoked_at")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([tokenHash])
+  @@index([userId])
+  @@map("refresh_tokens")
+}
