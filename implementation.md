@@ -1,4 +1,4 @@
-# Implementation Plan — Vigil
+# Implementation Plan — Sagittarius
 **Version:** 1.0 (Stage 1)
 **Architecture Version referenced:** 1.0 (Stage 1)
 **Status:** Active
@@ -8,7 +8,7 @@
 
 ## FOR AI CODING AGENTS — READ THIS FIRST
 
-You are building **Vigil** — an automated website security audit platform for Indian SMBs.
+You are building **Sagittarius** — an automated website security audit platform for Indian SMBs.
 
 The full context lives in:
 - `docs/PRD.md` — What we're building and why (requirements, user stories)
@@ -51,7 +51,7 @@ docker --version  # Must be 24.x+
 ### Bootstrap from scratch
 ```bash
 # 1. Create monorepo
-mkdir vigil && cd vigil
+mkdir sagittarius && cd sagittarius
 git init
 pnpm init
 
@@ -76,7 +76,7 @@ pnpm dev                      # Start web:3000 + worker
 | `REDIS_TOKEN` | Yes | Upstash Redis REST token | Upstash dashboard → Redis → REST API → UPSTASH_REDIS_REST_TOKEN |
 | `JWT_SECRET` | Yes | 32+ char random string | `openssl rand -base64 32` |
 | `RESEND_API_KEY` | Yes | Resend API key | resend.com → API Keys |
-| `NEXTAUTH_URL` | Yes | Full URL of web app | `http://localhost:3000` (dev) / `https://vigil.so` (prod) |
+| `NEXTAUTH_URL` | Yes | Full URL of web app | `http://localhost:3000` (dev) / `https://sagittarius.so` (prod) |
 | `NEXT_PUBLIC_APP_URL` | Yes | Same as above (public) | Same as NEXTAUTH_URL |
 
 **`apps/worker/.env.local`**
@@ -162,7 +162,7 @@ pnpm dev                      # Start web:3000 + worker
 Root `package.json`:
 ```json
 {
-  "name": "vigil",
+  "name": "sagittarius",
   "private": true,
   "scripts": {
     "dev": "turbo run dev",
@@ -170,10 +170,10 @@ Root `package.json`:
     "typecheck": "turbo run typecheck",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "db:migrate": "pnpm --filter @vigil/db migrate:dev",
-    "db:migrate:deploy": "pnpm --filter @vigil/db migrate:deploy",
-    "db:seed": "pnpm --filter @vigil/db seed",
-    "db:generate": "pnpm --filter @vigil/db generate"
+    "db:migrate": "pnpm --filter @sagittarius/db migrate:dev",
+    "db:migrate:deploy": "pnpm --filter @sagittarius/db migrate:deploy",
+    "db:seed": "pnpm --filter @sagittarius/db seed",
+    "db:generate": "pnpm --filter @sagittarius/db generate"
   },
   "devDependencies": {
     "turbo": "^2.0.0",
@@ -665,7 +665,7 @@ export const redis = new Redis({
 ```typescript
 import { Queue, Worker, type Processor } from 'bullmq'
 import IORedis from 'ioredis'
-import type { ScanJob } from '@vigil/shared-types'
+import type { ScanJob } from '@sagittarius/shared-types'
 
 // NOTE: BullMQ requires ioredis (TCP), not Upstash REST.
 // Use separate ioredis connection for BullMQ.
@@ -732,7 +732,7 @@ export function createScanWorker(processor: Processor<ScanJob>) {
 `apps/web/app/api/v1/health/route.ts`:
 ```typescript
 import { NextResponse } from 'next/server'
-import { db } from '@vigil/db'
+import { db } from '@sagittarius/db'
 
 export async function GET() {
   let dbStatus: 'ok' | 'degraded' = 'ok'
@@ -776,7 +776,7 @@ export async function GET() {
 
 `apps/worker/src/index.ts`:
 ```typescript
-import { createScanWorker } from '@vigil/queue'
+import { createScanWorker } from '@sagittarius/queue'
 import { orchestrateScan } from './orchestrator'
 
 const worker = createScanWorker(orchestrateScan)
@@ -793,13 +793,13 @@ worker.on('error', (err) => {
   console.error('[worker] Worker error:', err)
 })
 
-console.log('[worker] Vigil worker started. Waiting for scan jobs...')
+console.log('[worker] Sagittarius worker started. Waiting for scan jobs...')
 ```
 
 `apps/worker/src/orchestrator.ts` (stub only — Phase 3 fills this in):
 ```typescript
 import type { Job } from 'bullmq'
-import type { ScanJob } from '@vigil/shared-types'
+import type { ScanJob } from '@sagittarius/shared-types'
 
 /**
  * Main scan orchestration function.
@@ -815,7 +815,7 @@ export async function orchestrateScan(job: Job<ScanJob>): Promise<void> {
 
 **Acceptance criteria:**
 - [ ] `pnpm dev` in `apps/worker` starts without TypeScript errors
-- [ ] Worker logs "Vigil worker started. Waiting for scan jobs..."
+- [ ] Worker logs "Sagittarius worker started. Waiting for scan jobs..."
 - [ ] Worker connects to Redis without errors (requires `docker-compose up -d`)
 
 ---
@@ -892,7 +892,7 @@ Verify in local Postgres (via Supabase Studio or psql) that all 8 tables exist w
 **File:** `packages/db/prisma/seed.ts`
 
 Create:
-1. One verified user: `{ email: "dev@vigil.so", password: bcrypt("test1234", 12) }`
+1. One verified user: `{ email: "dev@sagittarius.so", password: bcrypt("test1234", 12) }`
 2. One API key for that user: `{ name: "Dev Key", key: "vgl_testkey123456789012345678901" }`
 3. Three scans with findings — one `complete`, one `running`, one `failed`
 4. DPDP-mapped findings for the complete scan
@@ -1272,8 +1272,8 @@ Filters out wildcard entries (`*.domain.com`).
 **File:** `apps/worker/src/dpdp-mapper.ts`
 
 ```typescript
-import { DPDP_RULES } from '@vigil/config'
-import type { Finding } from '@vigil/shared-types'
+import { DPDP_RULES } from '@sagittarius/config'
+import type { Finding } from '@sagittarius/shared-types'
 
 /**
  * Maps a finding key to DPDP Act section, fine range, and implication.
@@ -1475,7 +1475,7 @@ Sections (in order):
 6. **Sign up CTA:** Simple email signup form
 
 **Consent checkbox text (exact):**
-> I confirm that I own this website or have explicit authorization from the owner to perform a security scan. I understand that Vigil will access publicly available information from this URL.
+> I confirm that I own this website or have explicit authorization from the owner to perform a security scan. I understand that Sagittarius will access publicly available information from this URL.
 
 **Acceptance criteria:**
 - [ ] Renders as SSG (no `use client` at page level)
@@ -1602,7 +1602,7 @@ Resolve or document any HIGH/CRITICAL findings.
 
 **File:** `apps/web/next.config.ts` or route-level middleware
 
-Production allowed origins: `https://vigil.so` only.
+Production allowed origins: `https://sagittarius.so` only.
 Development: `http://localhost:3000`.
 Credentials: true (for cookie-based auth).
 
@@ -1642,7 +1642,7 @@ Verify:
 - [ ] All environment variables set in Railway and Vercel dashboards
 - [ ] Production DB migrations run: `pnpm db:migrate:deploy`
 - [ ] Worker deployed and consuming from production queue
-- [ ] `GET https://vigil.so/api/v1/health` returns `{ "status": "ok", ... }`
+- [ ] `GET https://sagittarius.so/api/v1/health` returns `{ "status": "ok", ... }`
 
 ---
 

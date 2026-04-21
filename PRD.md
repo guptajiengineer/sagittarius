@@ -1,4 +1,4 @@
-# Product Requirements Document — Vigil
+# Product Requirements Document — Sagittarius
 **Version:** 1.0 (Stage 1)
 **Status:** Draft
 **Last Updated:** 2026-04-10
@@ -12,9 +12,9 @@
 
 ## 1. Executive Summary
 
-Vigil is an automated website security audit platform built for Indian small and medium businesses (SMBs). It orchestrates 10+ industry-standard security APIs in parallel, aggregates their results, maps every finding to India's Digital Personal Data Protection (DPDP) Act 2023, and delivers a plain-English security report in under 10 minutes — accessible via a self-serve dashboard and a public REST API.
+Sagittarius is an automated website security audit platform built for Indian small and medium businesses (SMBs). It orchestrates 10+ industry-standard security APIs in parallel, aggregates their results, maps every finding to India's Digital Personal Data Protection (DPDP) Act 2023, and delivers a plain-English security report in under 10 minutes — accessible via a self-serve dashboard and a public REST API.
 
-Where a traditional penetration test costs ₹75,000–₹5,00,000 and takes weeks to schedule, Vigil delivers a structured security audit report in minutes. The product targets the 63 million Indian SMBs that currently have zero security coverage, starting with the 10 million+ merchants on Razorpay who handle real customer payment data under no security scrutiny whatsoever.
+Where a traditional penetration test costs ₹75,000–₹5,00,000 and takes weeks to schedule, Sagittarius delivers a structured security audit report in minutes. The product targets the 63 million Indian SMBs that currently have zero security coverage, starting with the 10 million+ merchants on Razorpay who handle real customer payment data under no security scrutiny whatsoever.
 
 Stage 1 is free for early access users. The goal of Stage 1 is not revenue — it is a working, stable, API-exportable scan engine with a landing page, dashboard, and DPDP compliance layer, ready to demonstrate to Razorpay for native integration.
 
@@ -122,7 +122,7 @@ Razorpay identified this exact problem on their "Fix My Itch" platform with a Wh
 - **Technical sophistication:** High — will use only the REST API, will never log in to the dashboard
 
 ### Persona: Razorpay Merchant (via Razorpay integration, Stage 2)
-- **Who:** Any of Razorpay's 10M+ merchants. Does not know Vigil exists. Sees a "Security Score" widget in their existing Razorpay merchant dashboard.
+- **Who:** Any of Razorpay's 10M+ merchants. Does not know Sagittarius exists. Sees a "Security Score" widget in their existing Razorpay merchant dashboard.
 - **Goals:** Understand if their payment page is safe, without visiting another product.
 - **Frustrations:** Security is intimidating. Doesn't know where to start.
 - **Usage pattern:** On-demand, triggered by Razorpay UI prompt or notification. May scan once and never revisit unless reminded.
@@ -143,8 +143,8 @@ Razorpay identified this exact problem on their "Fix My Itch" platform with a Wh
 
 ### Consent & Legal
 - [P0] As a user initiating a scan, I want to see a consent checkbox confirming I own or am authorized to scan the target domain so that I understand the legal boundary before proceeding.
-- [P0] As a user, I want to see what data Vigil collects and how long it stores it before I submit a scan so that I can make an informed decision.
-- [P0] As Vigil, I want to log every consent event with the user ID, timestamp, IP address, and target domain so that we have an immutable legal record.
+- [P0] As a user, I want to see what data Sagittarius collects and how long it stores it before I submit a scan so that I can make an informed decision.
+- [P0] As Sagittarius, I want to log every consent event with the user ID, timestamp, IP address, and target domain so that we have an immutable legal record.
 
 ### Scan Submission
 - [P0] As a user, I want to enter a URL in the dashboard and start a scan with one click so that I don't need technical knowledge.
@@ -164,10 +164,10 @@ Razorpay identified this exact problem on their "Fix My Itch" platform with a Wh
 - [P1] As a user, I want to click into any past scan and see the full report so that I can review findings at any time.
 
 ### Landing Page
-- [P0] As a visitor, I want to understand what Vigil does within 10 seconds of landing so that I can decide whether to sign up.
+- [P0] As a visitor, I want to understand what Sagittarius does within 10 seconds of landing so that I can decide whether to sign up.
 - [P0] As a visitor, I want to see the DPDP Act angle explained so that I understand why this is legally urgent for my business.
 - [P0] As a visitor, I want a clear CTA to sign up for free so that there's no friction to getting started.
-- [P1] As a developer, I want to see API documentation linked from the landing page so that I can evaluate Vigil technically before signing up.
+- [P1] As a developer, I want to see API documentation linked from the landing page so that I can evaluate Sagittarius technically before signing up.
 
 ---
 
@@ -299,7 +299,7 @@ Razorpay identified this exact problem on their "Fix My Itch" platform with a Wh
 
 | # | Question | Owner | Deadline |
 |---|---|---|---|
-| 1 | Finalize product name — "Vigil" is working name | Founder | Before Stage 1 launch |
+| 1 | Finalize product name — "Sagittarius" is working name | Founder | Before Stage 1 launch |
 | 2 | Free tier scan limit: 10/day per API key — should Stage 1 be unlimited to maximize early feedback? | Founder | Before Stage 1 launch |
 | 3 | At what Stage 1 milestone do we initiate Razorpay integration conversation? | Founder | End of Stage 1 |
 | 4 | 12-month scan result retention — is this the right window under DPDP data minimisation principles? Consult legal. | Founder | Before Stage 1 launch |

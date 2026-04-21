@@ -1,4 +1,4 @@
-# System Security — Vigil
+# System Security — Sagittarius
 **Version:** 1.0 (Stage 1)
 **Status:** Approved
 **Architecture Version referenced:** 1.0 (Stage 1)
@@ -6,7 +6,7 @@
 
 > **Security is not a phase.** This document defines security controls that must be implemented during development, not after. Every Phase in `implementation.md` references this document. No Phase is "hardening only."
 >
-> **Vigil is a security product.** If our own systems are compromised, we lose all credibility. Our security posture must be demonstrably higher than the customers we serve.
+> **Sagittarius is a security product.** If our own systems are compromised, we lose all credibility. Our security posture must be demonstrably higher than the customers we serve.
 
 ---
 
@@ -17,9 +17,9 @@
 | Actor | Motivation | Capability | Target |
 |---|---|---|---|
 | Automated bots | Credential stuffing, spam account creation | Low — script-based | Auth endpoints |
-| Script kiddies | Use Vigil to scan sites they don't own | Low | Scan submission |
+| Script kiddies | Use Sagittarius to scan sites they don't own | Low | Scan submission |
 | Competitors | Exfiltrate scan data, reverse-engineer DPDP mappings | Medium | Database, API |
-| Motivated attackers | Compromise Vigil to attack Vigil's customers indirectly | High | Everything |
+| Motivated attackers | Compromise Sagittarius to attack Sagittarius's customers indirectly | High | Everything |
 | Malicious users | Abuse free tier, scan without consent | Low-Medium | Scan engine |
 | API key theft | Steal API keys from legitimate users | Medium | API key storage |
 
@@ -172,7 +172,7 @@ Mitigation: The Claude system prompt explicitly states "You are receiving struct
 
 ### Why Consent Matters Legally
 
-Under the DPDP Act 2023, scanning a website without authorization constitutes unauthorized access to a computer system under the IT Act 2000. Vigil's legal protection depends on the user having explicit authorization to scan the target.
+Under the DPDP Act 2023, scanning a website without authorization constitutes unauthorized access to a computer system under the IT Act 2000. Sagittarius's legal protection depends on the user having explicit authorization to scan the target.
 
 The consent architecture must be:
 1. **Explicit** — checkbox, not pre-checked
@@ -184,7 +184,7 @@ The consent architecture must be:
 
 ```
 User sees: "I confirm that I own this website or have explicit authorization 
-from the owner to perform a security scan. I understand that Vigil will 
+from the owner to perform a security scan. I understand that Sagittarius will 
 access publicly available information from this URL."
           [checkbox] [Submit]
 
@@ -332,7 +332,7 @@ Rate limit keys:
 ```typescript
 // Only allow requests from our own domain
 const ALLOWED_ORIGINS = [
-  'https://vigil.so',
+  'https://sagittarius.so',
   process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : null,
 ].filter(Boolean)
 
@@ -395,7 +395,7 @@ const securityHeaders = [
 
 ### PII Handling
 
-PII in Vigil's context:
+PII in Sagittarius's context:
 1. **User email addresses** — stored in `users` table; never logged
 2. **Email addresses in breach data** — from HaveIBeenPwned; masked before storage
 3. **IP addresses** — stored in consent_log; masked to /24 subnet
@@ -589,7 +589,7 @@ If a breach involves personal data of Indian citizens:
 - Notify affected users: "without delay" (DPDP Act Section 8(6))
 - Notification must include: nature of breach, categories of data affected, approximate number affected, likely consequences, measures taken
 
-Vigil's scan results contain vulnerability data about websites (not user personal data). However, user emails and consent logs are personal data. A DB breach would require DPDP notification.
+Sagittarius's scan results contain vulnerability data about websites (not user personal data). However, user emails and consent logs are personal data. A DB breach would require DPDP notification.
 
 ---
 
@@ -631,7 +631,7 @@ AI agents and developers must verify these at each phase completion:
 
 ### Phase 5 (Hardening)
 - [ ] All security response headers present
-- [ ] CORS allows only `vigil.so` in production
+- [ ] CORS allows only `sagittarius.so` in production
 - [ ] Rate limiting on all auth endpoints
 - [ ] `pnpm audit` clean
 - [ ] Zod validation on every API route handler

@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import './progress-logger'
 import { createScanWorker } from '@sagittarius/queue'
 import { orchestrateScan } from './orchestrator'
 

@@ -1,4 +1,4 @@
-# System Design — Vigil
+# System Design — Sagittarius
 **Version:** 1.0 (Stage 1)
 **Status:** Draft
 **PRD Version referenced:** 1.0 (Stage 1)
@@ -163,7 +163,7 @@ Storage / year:     ~288 GB (within Postgres range without partitioning)
 ## 4. Data Model
 
 ### Entity: User
-- **Purpose:** Represents a registered Vigil account
+- **Purpose:** Represents a registered Sagittarius account
 - **Key fields:**
   - `id: UUID` — primary key
   - `email: String` — unique, indexed
@@ -707,7 +707,7 @@ Prisma ORM with parameterized queries only. No raw SQL in Stage 1. If raw SQL is
 
 ### CORS Policy
 ```
-Allowed origins: https://vigil.so (production), http://localhost:3000 (dev)
+Allowed origins: https://sagittarius.so (production), http://localhost:3000 (dev)
 Allowed methods: GET, POST, DELETE, PATCH, OPTIONS
 Allowed headers: Authorization, Content-Type
 Credentials: true (for cookie-based auth)

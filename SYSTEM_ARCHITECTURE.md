@@ -1,4 +1,4 @@
-# System Architecture — Vigil
+# System Architecture — Sagittarius
 **Version:** 1.0 (Stage 1)
 **Status:** Approved
 **System Design Version referenced:** 1.0 (Stage 1)
@@ -25,7 +25,7 @@ When Stage 3 begins (team formation, active scanning tools, 100K+ scans/day), th
 ## 2. Repository Structure
 
 ```
-vigil/
+sagittarius/
 ├── apps/
 │   ├── web/                          # Next.js application
 │   │   ├── app/                      # Next.js App Router
@@ -284,7 +284,7 @@ LLM:
 
 DNS:
   Provider:       Cloudflare (free)
-  Domain:         vigil.so (example — to be registered)
+  Domain:         sagittarius.so (example — to be registered)
 
 SSL:
   Strategy:       Automatic via Vercel (Let's Encrypt) for frontend
@@ -303,8 +303,8 @@ SSL:
 ```bash
 # Prerequisites: Node.js 20, pnpm, Docker
 
-git clone https://github.com/your-org/vigil
-cd vigil
+git clone https://github.com/your-org/sagittarius
+cd sagittarius
 pnpm install
 
 # Start local services
