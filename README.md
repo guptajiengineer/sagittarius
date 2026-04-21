@@ -47,7 +47,7 @@ Sagittarius is currently in **Stage 1 (Early Access)**.
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:guptajiengineer/sagittarius.git
    cd sagittarius
    ```
 
@@ -85,4 +85,4 @@ Contributions are welcome! Please ensure any pull requests align with the goals 
 
 ## 📄 License
 
-Proprietary / Closed Source (Modify as needed)
+Proprietary / Closed Source
